@@ -185,3 +185,24 @@
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
+
+/* Estilos personalizados para la barra de desplazamiento (Scrollbar) */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-surface-light) var(--bg-main);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-surface-light);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue-hover);
+}

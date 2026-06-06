@@ -26,4 +26,34 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     }, { passive: true });
+
+    // Scroll suave para los enlaces internos
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Cerrar el menú móvil si está abierto al hacer clic
+                if (navLinks && navLinks.classList.contains('active')) {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('active');
+                }
+
+                // Realizar el scroll suave, compensando la altura del menú fijo
+                const headerOffset = navbar ? navbar.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
