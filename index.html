@@ -66,21 +66,37 @@
                     </div>
                 </div>
                 <div class="hero-visual fade-in" style="transition-delay: 0.2s;">
-                    <div class="tech-visual animate-float">
+                    <div class="tech-visual animate-float" style="background: rgba(2, 6, 23, 0.7); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.05);">
                         <div class="tech-header">
-                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
-                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
-                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
-                            <div style="margin: 0 auto; width: 30%; height: 8px; background: var(--bg-surface-light); border-radius: 4px;"></div>
+                            <div style="width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:inset 0 0 4px rgba(0,0,0,0.2);"></div>
+                            <div style="width:12px;height:12px;border-radius:50%;background:#eab308;box-shadow:inset 0 0 4px rgba(0,0,0,0.2);"></div>
+                            <div style="width:12px;height:12px;border-radius:50%;background:#22c55e;box-shadow:inset 0 0 4px rgba(0,0,0,0.2);"></div>
+                            <div style="margin: 0 auto; width: 40%; height: 6px; background: var(--bg-surface-light); border-radius: 4px;"></div>
                         </div>
-                        <div style="flex:1; display:flex; align-items:center; justify-content:center; position:relative;">
-                            <!-- Pixels Flotantes -->
-                            <div style="position:absolute; top:20%; left:20%; width:16px; height:16px; background:var(--accent-blue);" class="animate-pulse"></div>
-                            <div style="position:absolute; bottom:30%; right:20%; width:24px; height:24px; border:2px solid var(--accent-blue); opacity:0.5;"></div>
-                            <!-- Camara Central -->
-                            <div style="width: 140px; height: 140px; background: var(--bg-main); border: 1px solid var(--bg-surface-light); border-radius: 1rem; display:flex; align-items:center; justify-content:center; position:relative; box-shadow: 0 0 40px rgba(37,99,235,0.2); z-index:2;">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
-                                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:10px; height:10px; background:var(--accent-blue-hover); border-radius:50%; box-shadow: 0 0 10px var(--accent-blue-hover);" class="animate-pulse"></div>
+                        
+                        <!-- Fondo con grilla y brillos -->
+                        <div style="position:absolute;inset:0;background-image:linear-gradient(var(--bg-surface-light) 1px, transparent 1px), linear-gradient(90deg, var(--bg-surface-light) 1px, transparent 1px);background-size:24px 24px;opacity:0.15;z-index:0;margin-top:2.5rem;"></div>
+                        <div style="position:absolute; top: -10%; left: -10%; width: 50%; height: 50%; background: var(--accent-blue); border-radius: 50%; filter: blur(60px); opacity: 0.25; z-index: 0;"></div>
+                        <div style="position:absolute; bottom: -10%; right: -10%; width: 50%; height: 50%; background: #a855f7; border-radius: 50%; filter: blur(60px); opacity: 0.15; z-index: 0;"></div>
+
+                        <div style="flex:1; display:flex; align-items:center; justify-content:center; position:relative; z-index:1;">
+                            <!-- Tarjetas flotantes secundarias -->
+                            <div class="animate-float" style="position:absolute; top:15%; left:10%; padding: 0.75rem; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; box-shadow: 0 10px 20px rgba(0,0,0,0.4); animation-delay: 1.5s;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <div class="animate-float" style="position:absolute; bottom:15%; right:10%; padding: 0.75rem; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; box-shadow: 0 10px 20px rgba(0,0,0,0.4); animation-delay: 0.5s;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                            </div>
+                            
+                            <!-- Pixels geométricos -->
+                            <div style="position:absolute; top:25%; right:20%; width:12px; height:12px; background:var(--accent-blue-hover); border-radius:2px; box-shadow:0 0 10px var(--accent-blue-hover);" class="animate-pulse"></div>
+                            <div style="position:absolute; bottom:25%; left:20%; width:20px; height:20px; border:2px solid #a855f7; opacity:0.5; border-radius:4px; transform: rotate(15deg);"></div>
+
+                            <!-- Camara Central Glassmorphism -->
+                            <div style="width: 150px; height: 150px; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 1.5rem; display:flex; align-items:center; justify-content:center; position:relative; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); z-index:2;">
+                                <div style="position:absolute; inset:0; border-radius: 1.5rem; background: linear-gradient(135deg, rgba(37,99,235,0.2) 0%, transparent 100%); opacity: 0.6; pointer-events: none;"></div>
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:10px; height:10px; background:#60a5fa; border-radius:50%; box-shadow: 0 0 15px #60a5fa, 0 0 30px #60a5fa;" class="animate-pulse"></div>
                             </div>
                         </div>
                     </div>
@@ -202,7 +218,7 @@
         <div class="grid grid-2 fade-up">
             <div class="card project-card">
                 <div class="project-image">
-                    <img src="assets/images/tincho.png" alt="Martín Mangudo Portafolio" style="width: 100%; height: 240px; object-fit: cover; border-radius: 4px;">
+                    <img src="assets/images/tincho.png" alt="Martín Mangudo Portafolio" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
                 </div>
                 <div class="project-content">
                     <h3 style="font-size:1.5rem;">Martín Mangudo - Portafolio</h3>
@@ -217,7 +233,7 @@
             <div class="card project-card">
                 <div class="project-image">
                     <!-- Placeholder de imagen -->
-                    <div style="background-color: var(--bg-surface-light); height: 240px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">☕</div>
+                    <div style="background-color: var(--bg-surface-light); height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">☕</div>
                 </div>
                 <div class="project-content">
                     <h3 style="font-size:1.5rem;">Cafetería de Especialidad</h3>

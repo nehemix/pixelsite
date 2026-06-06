@@ -153,6 +153,7 @@
 }
 .project-image {
     width: 100%;
+    aspect-ratio: 5 / 3;
     overflow: hidden;
     border-radius: 4px;
 }
