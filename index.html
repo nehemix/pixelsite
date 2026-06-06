@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelSite | Desarrollo Web y Fotografía Profesional</title>
+    <meta name="description" content="Creamos páginas web y tiendas online modernas y rápidas. Combinamos desarrollo web y fotografía profesional para hacer crecer tu negocio.">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Scripts -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/observer.js"></script>
+    <script defer src="js/faq.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo flex items-center gap-2" style="font-weight: 700; color: var(--text-main); text-decoration: none; font-size: 1.25rem;">
+                <div style="width: 2rem; height: 2rem; background: var(--accent-blue); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                PixelSite<span style="color: var(--accent-blue);">.</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#beneficios">Servicios</a>
+                <a href="/projects/">Proyectos</a>
+                <a href="#proceso">Proceso</a>
+                <a href="/contact/" class="btn btn-primary" style="padding: 0.5rem 1rem;">Presupuesto</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger">☰</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero section" style="position: relative; overflow: hidden; padding-top: 8rem; padding-bottom: 6rem;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at top, rgba(30,58,138,0.2) 0%, var(--bg-main) 70%); z-index: -1;"></div>
+            <div class="container grid grid-2 align-center">
+                <div class="hero-content fade-up" style="max-width: 600px;">
+                    <div class="badge">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-blue-hover);" class="animate-pulse"></span>
+                        Transformación Digital para Negocios
+                    </div>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.025em; font-weight: 700;">
+                        Unimos <span class="text-gradient">desarrollo web</span> y <span class="text-gradient">fotografía</span> para potenciar tu negocio.
+                    </h1>
+                    <p style="color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.25rem; line-height: 1.6;">Potencia tu presencia online a tu manera. Elige nuestro servicio de desarrollo web, sesiones de fotografía profesional, o combina ambos según lo que necesite tu negocio.</p>
+                    <div class="hero-actions flex" style="gap: 1rem; flex-wrap: wrap;">
+                        <a href="/contact/" class="btn btn-primary flex items-center gap-2">Solicitar presupuesto <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <a href="/projects/" class="btn btn-secondary">Ver proyectos</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in" style="transition-delay: 0.2s;">
+                    <div class="tech-visual animate-float">
+                        <div class="tech-header">
+                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
+                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
+                            <div style="width:12px;height:12px;border-radius:50%;background:var(--bg-surface-light)"></div>
+                            <div style="margin: 0 auto; width: 30%; height: 8px; background: var(--bg-surface-light); border-radius: 4px;"></div>
+                        </div>
+                        <div style="flex:1; display:flex; align-items:center; justify-content:center; position:relative;">
+                            <!-- Pixels Flotantes -->
+                            <div style="position:absolute; top:20%; left:20%; width:16px; height:16px; background:var(--accent-blue);" class="animate-pulse"></div>
+                            <div style="position:absolute; bottom:30%; right:20%; width:24px; height:24px; border:2px solid var(--accent-blue); opacity:0.5;"></div>
+                            <!-- Camara Central -->
+                            <div style="width: 140px; height: 140px; background: var(--bg-main); border: 1px solid var(--bg-surface-light); border-radius: 1rem; display:flex; align-items:center; justify-content:center; position:relative; box-shadow: 0 0 40px rgba(37,99,235,0.2); z-index:2;">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:10px; height:10px; background:var(--accent-blue-hover); border-radius:50%; box-shadow: 0 0 10px var(--accent-blue-hover);" class="animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="beneficios" class="section bg-surface">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Beneficios</span>
+            <h2>Tu negocio, siempre un paso adelante</h2>
+            <p>Una presencia online sólida es la mejor inversión para tu negocio.</p>
+        </div>
+        <div class="grid grid-3 fade-up">
+            <div class="card">
+                <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                <h3>Más visibilidad</h3>
+                <p>Llega a miles de clientes potenciales buscando lo que ofreces.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                <h3>Imagen profesional</h3>
+                <p>Transmite confianza y seriedad desde el primer clic con un diseño impecable.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+                <h3>Más ventas</h3>
+                <p>Sitios diseñados estratégicamente para convertir visitas en clientes reales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Servicios -->
+<section id="servicios" class="section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Nuestros Servicios</span>
+            <h2>Soluciones digitales a medida</h2>
+            <p>Te acompañamos en cada etapa del crecimiento online de tu negocio con herramientas efectivas.</p>
+        </div>
+        <div class="grid grid-3 fade-up">
+            <div class="card" style="display: flex; flex-direction: column;">
+                <div class="flex items-center justify-between" style="margin-bottom: 1rem;">
+                    <div class="card-icon" style="margin:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></div>
+                    <span class="tag">Alta conversión</span>
+                </div>
+                <h3 style="margin-bottom: 0.5rem;">Landing Pages</h3>
+                <p style="flex-grow: 1;">Páginas enfocadas en captar clientes, lanzar promociones y generar consultas rápidas.</p>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <div class="flex items-center justify-between" style="margin-bottom: 1rem;">
+                    <div class="card-icon" style="margin:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem;">Webs para Negocios</h3>
+                <p style="flex-grow: 1;">Sitios institucionales completos para mostrar tus servicios, información, ubicación y contacto.</p>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <div class="flex items-center justify-between" style="margin-bottom: 1rem;">
+                    <div class="card-icon" style="margin:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+                    <span class="tag">Ventas 24/7</span>
+                </div>
+                <h3 style="margin-bottom: 0.5rem;">Tiendas Online</h3>
+                <p style="flex-grow: 1;">Plataformas de Ecommerce modernas para vender tus productos por internet de forma automática.</p>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <div class="flex items-center justify-between" style="margin-bottom: 1rem;">
+                    <div class="card-icon" style="margin:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg></div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem;">Fotografía de Producto</h3>
+                <p style="flex-grow: 1;">Imágenes profesionales para catálogos y tiendas online que hacen destacar tus productos.</p>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <div class="flex items-center justify-between" style="margin-bottom: 1rem;">
+                    <div class="card-icon" style="margin:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem;">Optimización y Seguridad</h3>
+                <p style="flex-grow: 1;">Mejoras de velocidad de carga, estabilidad, actualizaciones y protección contra ataques.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Diferencial PixelSite (Desarrollo + Fotografía) -->
+<section id="diferencial" class="section fade-in">
+    <div class="container grid grid-2 align-center">
+        <div class="diferencial-content fade-up">
+            <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Innovación Tecnológica</span>
+            <h2>Servicios adaptados a tu medida</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">No tienes que contratar un paquete cerrado. Puedes solicitar únicamente el desarrollo de tu sitio web, agendar una sesión de fotos profesional, o combinar ambos servicios.</p>
+            <div class="grid grid-2" style="gap: 1rem; margin-top: 2rem;">
+                <div class="flex items-center gap-2 text-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Stack Moderno</div>
+                <div class="flex items-center gap-2 text-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> IA Integrada</div>
+                <div class="flex items-center gap-2 text-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Ultra Veloz</div>
+                <div class="flex items-center gap-2 text-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Seguridad</div>
+            </div>
+        </div>
+        <div class="grid grid-2 fade-up" style="gap:1rem;">
+            <div class="card" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <h4 style="margin-top:1rem;">Código Limpio</h4>
+            </div>
+            <div class="card" style="display:flex; flex-direction:column; align-items:center; text-align:center; transform: translateY(2rem);">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <h4 style="margin-top:1rem;">Rendimiento</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Proyectos Destacados -->
+<section id="proyectos" class="section bg-surface">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Proyectos Destacados</h2>
+            <p>Descubre cómo hemos ayudado a otros negocios a crecer online con páginas rápidas y diseño profesional.</p>
+        </div>
+        <div class="grid grid-2 fade-up">
+            <div class="card project-card">
+                <div class="project-image">
+                    <img src="assets/images/tincho.png" alt="Martín Mangudo Portafolio" style="width: 100%; height: 240px; object-fit: cover; border-radius: 4px;">
+                </div>
+                <div class="project-content">
+                    <h3 style="font-size:1.5rem;">Martín Mangudo - Portafolio</h3>
+                    <p class="project-desc">Sitio web para fotógrafo profesional enfocado en resaltar su trabajo visual y servicios.</p>
+                    <div class="project-tags">
+                        <span class="tag">Desarrollo Web</span>
+                        <span class="tag">Portafolio</span>
+                    </div>
+                    <a href="https://martin.nehemi.online/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full" style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">Visitar sitio web <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                </div>
+            </div>
+            <div class="card project-card">
+                <div class="project-image">
+                    <!-- Placeholder de imagen -->
+                    <div style="background-color: var(--bg-surface-light); height: 240px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">☕</div>
+                </div>
+                <div class="project-content">
+                    <h3 style="font-size:1.5rem;">Cafetería de Especialidad</h3>
+                    <p class="project-desc">Landing page para captación de reservas y menú digital interactivo.</p>
+                    <div class="project-tags">
+                        <span class="tag">Landing Page</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                    <a href="/projects/" class="btn btn-secondary w-full" style="margin-top: 1rem;">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;" class="fade-up">
+            <a href="/projects/" class="btn btn-primary">Ver todos los proyectos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Proceso -->
+<section id="proceso" class="section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Metodología</span>
+            <h2>Nuestro proceso de trabajo</h2>
+            <p>Simple, transparente y enfocado en resultados.</p>
+        </div>
+        <div class="process-timeline fade-up">
+            <div class="process-step">
+                <div class="step-number" style="margin-bottom: 1rem;">1</div>
+                <h3 style="margin-bottom: 0.5rem;">Reunión</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Definimos objetivos y necesidades comerciales.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number" style="margin-bottom: 1rem;">2</div>
+                <h3 style="margin-bottom: 0.5rem;">Planificación</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Estructuramos la web y estrategia.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number" style="margin-bottom: 1rem;">3</div>
+                <h3 style="margin-bottom: 0.5rem;">Desarrollo</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Código limpio y optimizado.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number" style="margin-bottom: 1rem;">4</div>
+                <h3 style="margin-bottom: 0.5rem;">Lanzamiento</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Desplegamos tu sitio de forma segura.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección FAQ (Acordeón) -->
+<section id="faq" class="section bg-surface">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Dudas Frecuentes</span>
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resolvemos tus dudas antes de empezar.</p>
+        </div>
+        <div class="faq-container fade-up">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Cuáles son los tiempos de entrega?</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Depende del proyecto. Una Landing Page suele tomar de 1 a 2 semanas, mientras que una Tienda Online completa puede llevar entre 3 y 5 semanas.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Tengo que pagar mantenimiento mensual?</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No es obligatorio. Te entregamos un sitio autogestionable. Sin embargo, ofrecemos planes de mantenimiento opcionales si prefieres que nosotros nos encarguemos de las actualizaciones y seguridad.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Autonomía y Contenido: ¿Podré modificar el contenido yo mismo después de entregarla?</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Depende de la página. Si es una landing page, por defecto no; si es una tienda online, sí. De todas formas, esto puede cambiar y podemos integrar un panel autogestionable a pedido del cliente.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Cuáles son las formas de pago?</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Aceptamos transferencia bancaria, tarjetas de crédito/débito y criptomonedas. Trabajamos con un 50% de anticipo y 50% al finalizar el proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Contacto -->
+<section id="contacto" class="section fade-up" style="position:relative; background: var(--accent-blue); overflow: hidden;">
+    <div style="position: absolute; inset:0; background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);"></div>
+    <div class="container" style="position:relative; z-index:2; text-align:center;">
+        <div class="contact-info">
+            <h2>Hablemos sobre tu próximo proyecto</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.125rem;">Contanos qué necesitás y te ayudaremos a encontrar la mejor solución para tu negocio.</p>
+            <div class="contact-methods flex" style="justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <a href="/contact/" class="btn btn-secondary" style="background:var(--bg-main); color:white; border:none;">
+                    Contactar ahora
+                </a>
+                <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Chat por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 0 2rem 0; background: var(--bg-main); border-top: 1px solid var(--bg-surface-light);">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 3rem;">
+            <div style="grid-column: span 2;">
+                <div class="flex items-center gap-2" style="font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">
+                    <div style="width: 1.5rem; height: 1.5rem; border: 1px solid var(--bg-surface-light); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    PixelSite
+                </div>
+                <p style="color: var(--text-secondary); max-width: 300px; font-size: 0.95rem; line-height: 1.6;">Diseño y desarrollo web moderno para negocios que buscan crecer, destacar y aumentar sus ventas online.</p>
+            </div>
+            <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 1rem;">Servicios</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Landing Pages</a></li>
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Webs para Negocios</a></li>
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Tiendas Online</a></li>
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Optimización Web</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 1rem;">Empresa</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="/projects/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Proyectos</a></li>
+                    <li><a href="/#proceso" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Metodología</a></li>
+                    <li><a href="/contact/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container flex" style="justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--bg-surface-light); flex-wrap: wrap; gap: 1rem;">
+            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                <p>&copy; 2024 PixelSite. Todos los derechos reservados.</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">Privacidad</a>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">Términos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

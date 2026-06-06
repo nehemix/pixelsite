@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | PixelSite</title>
+    <meta name="description" content="Explora nuestro catálogo de proyectos, landing pages y tiendas online creadas con tecnología moderna y fotografía profesional.">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS (Subimos un nivel con ../ para buscar los estilos) -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <!-- Scripts -->
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/observer.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" style="font-weight: 700; color: var(--text-main); text-decoration: none; font-size: 1.25rem;">PixelSite</a>
+            <nav class="nav-links" id="nav-links">
+                <a href="/#inicio">Inicio</a>
+                <a href="/#beneficios">Servicios</a>
+                <a href="/projects/" style="color: var(--text-main);">Proyectos</a>
+                <a href="/#proceso">Proceso</a>
+                <a href="/#contacto">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger">☰</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="padding-top: 8rem;">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2>Nuestros Proyectos</h2>
+                    <p>Una muestra de los negocios a los que hemos ayudado a potenciar su presencia online combinando tecnología y diseño visual.</p>
+                </div>
+                
+                <!-- Catálogo completo -->
+                <div class="grid grid-2 fade-up">
+                    <!-- Copias las tarjetas (project-card) que hicimos en el index.html principal aquí, puedes agregar más -->
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <img src="../assets/images/tincho.png" alt="Martín Mangudo Portafolio" style="width: 100%; height: 240px; object-fit: cover; border-radius: 4px;">
+                        </div>
+                        <div class="project-content">
+                            <h3 style="font-size:1.5rem;">Martín Mangudo - Portafolio</h3>
+                            <p class="project-desc">Sitio web para fotógrafo profesional enfocado en resaltar su trabajo visual y servicios.</p>
+                            <div class="project-tags">
+                                <span class="tag">Desarrollo Web</span>
+                                <span class="tag">Portafolio</span>
+                            </div>
+                            <a href="https://martin.nehemi.online/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full" style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">Visitar sitio web <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <div style="background-color: var(--bg-surface-light); height: 240px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💪</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 style="font-size:1.5rem;">FitLife Gym</h3>
+                            <p class="project-desc">Página de alta conversión para captación de nuevos socios con integración de WhatsApp.</p>
+                            <div class="project-tags">
+                                <span class="tag">Landing Page</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <div style="background-color: var(--bg-surface-light); height: 240px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👕</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 style="font-size:1.5rem;">Urban Wear</h3>
+                            <p class="project-desc">Ecommerce de indumentaria urbana con pasarela de pagos, control de stock y cálculo de envíos.</p>
+                            <div class="project-tags">
+                                <span class="tag">Tienda Online</span>
+                                <span class="tag">Ecommerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <div style="background-color: var(--bg-surface-light); height: 240px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">☕</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cafetería de Especialidad</h3>
+                            <p class="project-desc">Landing page para captación de reservas y menú digital interactivo.</p>
+                            <div class="project-tags">
+                                <span class="tag">Landing Page</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 0 2rem 0; background: var(--bg-main); border-top: 1px solid var(--bg-surface-light); margin-top: 4rem;">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 3rem;">
+            <div style="grid-column: span 2;">
+                <div class="flex items-center gap-2" style="font-weight: bold; font-size: 1.25rem; margin-bottom: 1rem;">
+                    <div style="width: 1.5rem; height: 1.5rem; border: 1px solid var(--bg-surface-light); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue-hover)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    PixelSite
+                </div>
+                <p style="color: var(--text-secondary); max-width: 300px; font-size: 0.95rem; line-height: 1.6;">Diseño y desarrollo web moderno para negocios que buscan crecer, destacar y aumentar sus ventas online.</p>
+            </div>
+            <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 1rem;">Servicios</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Landing Pages</a></li>
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Webs para Negocios</a></li>
+                    <li><a href="/#servicios" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Tiendas Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 1rem;">Empresa</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="/projects/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Proyectos</a></li>
+                    <li><a href="/#proceso" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Metodología</a></li>
+                    <li><a href="/contact/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container flex" style="justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--bg-surface-light); flex-wrap: wrap; gap: 1rem;">
+            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                <p>&copy; 2024 PixelSite. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
