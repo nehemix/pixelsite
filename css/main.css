@@ -53,6 +53,7 @@ body {
     .nav-links {
         display: flex;
         flex-direction: row;
+        align-items: center;
         position: static;
         width: auto;
         background-color: transparent;
@@ -61,13 +62,13 @@ body {
         gap: var(--spacing-lg);
     }
 }
-.nav-links a {
-    color: var(--text-secondary);
+.nav-links a:not(.btn) {
+    color: var(--text-main);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
-.nav-links a:hover {
-    color: var(--text-main);
+.nav-links a:not(.btn):hover {
+    color: var(--accent-blue-hover);
 }
 .fade-up {
     opacity: 0;
