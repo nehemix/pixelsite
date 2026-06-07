@@ -209,7 +209,7 @@ html {
 
 /* Estilos de la Galería Fotográfica */
 .gallery-grid {
-    display: grid !important;
+    display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -224,7 +224,7 @@ html {
     }
 }
 .gallery-item {
-    padding-bottom: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 1rem;
     width: 100%;
