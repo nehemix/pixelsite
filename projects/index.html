@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | PixelSite</title>
-    <meta name="description" content="Explorá nuestro catálogo de proyectos, landing pages y tiendas online creadas con tecnología moderna y fotografía profesional.">
+    <title>Proyectos y Portafolio Web | PixelSite</title>
+    <meta name="description" content="Explorá nuestro catálogo de proyectos web, landing pages y tiendas online creadas con tecnología moderna, diseño responsivo y fotografía profesional.">
+    <meta name="keywords" content="desarrollo web, diseño web, portafolio, tiendas online, landing pages, fotografía de producto, PixelSite">
+    <meta name="author" content="PixelSite">
+    <link rel="canonical" href="https://tusitio.com/projects/">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com/projects/">
+    <meta property="og:title" content="Proyectos y Portafolio Web | PixelSite">
+    <meta property="og:description" content="Explorá nuestro catálogo de proyectos web, landing pages y tiendas online creadas con tecnología moderna, diseño responsivo y fotografía profesional.">
+    <!-- Reemplazar con la URL real de tu imagen: <meta property="og:image" content="https://tusitio.com/assets/images/og-image.jpg"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tusitio.com/projects/">
+    <meta property="twitter:title" content="Proyectos y Portafolio Web | PixelSite">
+    <meta property="twitter:description" content="Explorá nuestro catálogo de proyectos web, landing pages y tiendas online creadas con tecnología moderna, diseño responsivo y fotografía profesional.">
+    <!-- Reemplazar con la URL real de tu imagen: <meta property="twitter:image" content="https://tusitio.com/assets/images/twitter-image.jpg"> -->
     
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +38,7 @@
     <!-- Scripts -->
     <script defer src="../js/main.js"></script>
     <script defer src="../js/observer.js"></script>
+    <script defer src="../js/gallery.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -49,7 +67,7 @@
         <section class="section" style="padding-top: 8rem;">
             <div class="container">
                 <div class="section-header fade-up">
-                    <h2>Nuestros Proyectos</h2>
+                    <h1>Nuestros Proyectos</h1>
                     <p>Una muestra de los negocios a los que ayudamos a potenciar su presencia online combinando tecnología y diseño visual.</p>
                 </div>
                 
@@ -70,47 +88,54 @@
                             <a href="https://martin.nehemi.online/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full" style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">Visitar sitio web <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
                         </div>
                     </div>
-                    
-                    <div class="card project-card">
-                        <div class="project-image">
-                            <div style="background-color: var(--bg-surface-light); height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💪</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 style="font-size:1.5rem;">FitLife Gym</h3>
-                            <p class="project-desc">Página de alta conversión para captación de nuevos socios con integración de WhatsApp.</p>
-                            <div class="project-tags">
-                                <span class="tag">Landing Page</span>
-                                <span class="tag">UI/UX</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card project-card">
-                        <div class="project-image">
-                            <div style="background-color: var(--bg-surface-light); height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">👕</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 style="font-size:1.5rem;">Urban Wear</h3>
-                            <p class="project-desc">Ecommerce de indumentaria urbana con pasarela de pagos, control de stock y cálculo de envíos.</p>
-                            <div class="project-tags">
-                                <span class="tag">Tienda Online</span>
-                                <span class="tag">Ecommerce</span>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="card project-card">
-                        <div class="project-image">
-                            <div style="background-color: var(--bg-surface-light); height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">☕</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Cafetería de Especialidad</h3>
-                            <p class="project-desc">Landing page para captación de reservas y menú digital interactivo.</p>
-                            <div class="project-tags">
-                                <span class="tag">Landing Page</span>
-                                <span class="tag">UI/UX</span>
-                            </div>
-                        </div>
+        <!-- Sección Galería Fotográfica -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span style="color: var(--accent-blue-hover); font-size:0.875rem; text-transform:uppercase; letter-spacing:1px; font-weight:600;">Portafolio Fotográfico</span>
+                    <h2>Nuestra Galería</h2>
+                    <p>Conocé la calidad visual de nuestras sesiones fotográficas de producto y lifestyle, ideales para destacar en catálogos y tiendas online.</p>
+                </div>
+                <div class="gallery-grid fade-up">
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A0866.avif">
+                        <img src="../assets/gallery/_P5A0866.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A0877.avif">
+                        <img src="../assets/gallery/_P5A0877.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A3036 copia.avif">
+                        <img src="../assets/gallery/_P5A3036 copia.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A3375.avif">
+                        <img src="../assets/gallery/_P5A3375.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A5740 copia.avif">
+                        <img src="../assets/gallery/_P5A5740 copia.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/_P5A6572.avif">
+                        <img src="../assets/gallery/_P5A6572.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/2P5A3080 copia.avif">
+                        <img src="../assets/gallery/2P5A3080 copia.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/2P5A6050-Editar.avif">
+                        <img src="../assets/gallery/2P5A6050-Editar.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/2P5A8290.avif">
+                        <img src="../assets/gallery/2P5A8290.avif" alt="Fotografía de producto" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/LABIAL ULTRA MATTE NEW DARK PINK - GTL  233529 7799054059326 B.avif">
+                        <img src="../assets/gallery/LABIAL ULTRA MATTE NEW DARK PINK - GTL  233529 7799054059326 B.avif" alt="Fotografía de producto labial" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/PALETA DE SOMBRAS PRO MASTER GTL  232215 7799054056851.avif">
+                        <img src="../assets/gallery/PALETA DE SOMBRAS PRO MASTER GTL  232215 7799054056851.avif" alt="Fotografía de paleta de sombras" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-src="../assets/gallery/PRE LUMI FILTER 02  LUMINIZER GTL 241505 7799054073728  C.avif">
+                        <img src="../assets/gallery/PRE LUMI FILTER 02  LUMINIZER GTL 241505 7799054073728  C.avif" alt="Fotografía luminizer" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -128,6 +153,10 @@
                     PixelSite
                 </div>
                 <p style="color: var(--text-secondary); max-width: 300px; font-size: 0.95rem; line-height: 1.6;">Diseño y desarrollo web moderno para negocios que buscan crecer, destacar y aumentar sus ventas online.</p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Buenos Aires, Argentina
+                </div>
             </div>
             <div>
                 <h4 style="color: white; font-weight: 600; margin-bottom: 1rem;">Servicios</h4>

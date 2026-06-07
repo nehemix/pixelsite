@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
             navLinks.classList.toggle('active');
+            
+            const hamburger = menuToggle.querySelector('.hamburger');
+            if (hamburger) {
+                hamburger.textContent = !isExpanded ? '✕' : '☰';
+                hamburger.style.transform = !isExpanded ? 'rotate(90deg)' : 'rotate(0deg)';
+            }
         });
     }
 
@@ -42,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (navLinks && navLinks.classList.contains('active')) {
                     menuToggle.setAttribute('aria-expanded', 'false');
                     navLinks.classList.remove('active');
+                    
+                    const hamburger = menuToggle.querySelector('.hamburger');
+                    if (hamburger) {
+                        hamburger.textContent = '☰';
+                        hamburger.style.transform = 'rotate(0deg)';
+                    }
                 }
 
                 // Realizar el scroll suave, compensando la altura del menú fijo
