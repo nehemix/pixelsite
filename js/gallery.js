@@ -39,13 +39,44 @@ document.addEventListener('DOMContentLoaded', () => {
     function openLightbox(index) {
         currentIndex = index;
         updateLightboxImage();
+
+        // Calcular el ancho del scrollbar para evitar el salto de los elementos
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        
+        // Sumar el ancho del scrollbar al padding que ya tengan los elementos por CSS
+        const bodyPadding = parseFloat(window.getComputedStyle(document.body).paddingRight) || 0;
+        document.body.style.paddingRight = `${bodyPadding + scrollbarWidth}px`;
+
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            // Desactivamos la transición momentáneamente para que el padding no se anime (evita el deslizamiento visual)
+            navbar.style.transition = 'none';
+            
+            const navPadding = parseFloat(window.getComputedStyle(navbar).paddingRight) || 0;
+            navbar.style.paddingRight = `${navPadding + scrollbarWidth}px`;
+        }
+
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Previene el scroll del fondo
     }
 
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = '';
+        
+        // Esperar a que termine la animación de cierre (200ms) antes de devolver el scrollbar
+        setTimeout(() => {
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                navbar.style.paddingRight = '';
+                
+                // Restauramos la transición original después de que se aplique el reset
+                setTimeout(() => {
+                    navbar.style.transition = '';
+                }, 10);
+            }
+        }, 200);
     }
 
     function updateLightboxImage() {

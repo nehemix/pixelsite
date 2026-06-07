@@ -2,6 +2,9 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
+# Configurar Nginx para que reconozca los archivos .avif como imágenes
+RUN echo "types { image/avif avif; }" > /etc/nginx/conf.d/avif.conf
+
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY . /usr/share/nginx/html/
 

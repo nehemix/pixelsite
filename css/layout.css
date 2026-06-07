@@ -28,7 +28,7 @@
     border-bottom: 1px solid var(--bg-surface-light);
 }
 .grid {
-    display: grid;
+    display: grid !important;
     gap: var(--spacing-lg);
 }
 .align-center {

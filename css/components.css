@@ -61,7 +61,7 @@
     margin-bottom: var(--spacing-md);
 }
 .process-timeline {
-    display: grid;
+    display: grid !important;
     gap: var(--spacing-md);
 }
 @media (min-width: 768px) {
@@ -209,30 +209,35 @@ html {
 
 /* Estilos de la Galería Fotográfica */
 .gallery-grid {
-    display: grid;
+    display: grid !important;
     gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 @media (min-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 @media (min-width: 1024px) {
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 .gallery-item {
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 1rem;
+    width: 100%;
     cursor: pointer;
     position: relative;
     border: 1px solid var(--bg-surface-light);
     background-color: var(--bg-surface);
 }
 .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -281,8 +286,8 @@ html {
 }
 .lightbox-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
@@ -320,13 +325,19 @@ html {
 .lightbox-prev:hover, .lightbox-next:hover {
     background: var(--accent-blue);
 }
-.lightbox-prev { left: 1rem; }
-.lightbox-next { right: 1rem; }
+.lightbox-prev { left: 2rem; }
+.lightbox-next { right: 2rem; }
 @media (max-width: 768px) {
     .lightbox-prev, .lightbox-next {
         width: 2.5rem;
         height: 2.5rem;
     }
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+    }
+    .lightbox-prev { left: 1rem; }
+    .lightbox-next { right: 1rem; }
 }
 
 /* Animación para el menú móvil y botón hamburguesa */
