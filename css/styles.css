@@ -829,3 +829,14 @@ body {
     transform: translateY(0) scale(1);
     transition-delay: 0.3s;
 }
+
+/* ==========================================================================
+   OPTIMIZACIÓN DE RENDIMIENTO EN MÓVILES (FCP)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Apagar efectos de GPU costosos (Glassmorphism) en pantallas chicas */
+    .tech-visual *, .navbar.scrolled {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}
