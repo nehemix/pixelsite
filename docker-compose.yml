@@ -1,15 +1,7 @@
 services:
   pixelsite:
     build: .
+    container_name: pixelsite-web
     ports:
-      - "80:8080"
-    restart: unless-stopped
-
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate run
-    profiles:
-      - prod
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+      - "127.0.0.1:8080:8080"
     restart: unless-stopped
