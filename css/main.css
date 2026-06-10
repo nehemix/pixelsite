@@ -30,6 +30,7 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     display: block;
+    margin-right: 1rem;
 }
 .nav-links {
     display: none;
@@ -163,12 +164,12 @@ body {
 /* --- HERO SECTION --- */
 /* Movimiento sutil de fondo */
 .hero > div:first-child {
-    background-size: 150% 150% !important;
     animation: subtlePan 20s ease-in-out infinite alternate;
+    will-change: transform;
 }
 @keyframes subtlePan {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+    0% { transform: scale(1.2) translate(-2%, -2%); }
+    100% { transform: scale(1.2) translate(2%, 2%); }
 }
 /* Staggered Content */
 .hero-content > * {
